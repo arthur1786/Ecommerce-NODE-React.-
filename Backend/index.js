@@ -8,6 +8,7 @@ const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 const categoryRoute = require("./routes/category");
+const imageRoute = require("./routes/image")
 const cors = require("cors");
 
 // Declara uma função para o arquivo .env
@@ -32,8 +33,9 @@ app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/categories", categoryRoute);
+app.use("/api/images", imageRoute)
 
 // express JS para função de callback - Rodar log no console de conexão de mensagem
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Backend server is running at port 3000");
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Backend server is running at port 5000");
 });

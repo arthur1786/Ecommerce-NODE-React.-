@@ -7,7 +7,7 @@ const CryptoJS = require("crypto-js")
 const router = require("express").Router();
 
 //Criar Produto
-router.post("/", verifyTokenAndAdmin, async (req,res)=>{
+router.post("/", verifyToken, async (req,res)=>{
     const newProduct = new Product(req.body)
 
     try {
